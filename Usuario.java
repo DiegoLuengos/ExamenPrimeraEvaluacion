@@ -88,4 +88,13 @@ public class Usuario
             System.out.println(nombrePersona +" ha consumido menos calorías que "+ persona.getNombrePersona());
         }
     }
+    
+    /**
+     * Muestra cuál es el alimento más calórico ingerido por el usuario.
+     */
+    public void alimentoMasCalorico(Alimento comida)
+    {
+        System.out.println("Alimento más calórico ingerido por el usuario: " + comida.getCalorias());
+    }
+    
 }
