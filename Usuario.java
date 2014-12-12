@@ -42,21 +42,50 @@ public class Usuario
         float gramosTotales = gramosProteinasIngeridos + gramosCarbohidratosIngeridos +
         gramosGrasasIngeridos;
         if (gramosTotales != 0) {
-        System.out.println("Nombre : "+ nombrePersona);
-        System.out.println("Gramos de proteínas ingeridos: "+ gramosProteinasIngeridos + 
-        "("+(gramosProteinasIngeridos*100)/gramosTotales +"%)");
-        System.out.println("Gramoos de carbohidratos ingeridos: "+ gramosCarbohidratosIngeridos + 
-        "("+(gramosCarbohidratosIngeridos*100)/gramosTotales +"%)");
-        System.out.println("Gramos de grasas ingeridos: "+ gramosGrasasIngeridos + 
-        "("+(gramosGrasasIngeridos*100)/gramosTotales +"%)");
-        System.out.println("Calorías ingeridas: " + caloriasIngeridas);
+           System.out.println("Nombre : "+ nombrePersona);
+           System.out.println("Gramos de proteínas ingeridos: "+ gramosProteinasIngeridos + 
+           "("+(gramosProteinasIngeridos*100)/gramosTotales +"%)");
+           System.out.println("Gramoos de carbohidratos ingeridos: "+ gramosCarbohidratosIngeridos + 
+           "("+(gramosCarbohidratosIngeridos*100)/gramosTotales +"%)");
+           System.out.println("Gramos de grasas ingeridos: "+ gramosGrasasIngeridos + 
+           "("+(gramosGrasasIngeridos*100)/gramosTotales +"%)");
+           System.out.println("Calorías ingeridas: " + caloriasIngeridas);
        }
        else {
            System.out.println("Nombre : "+ nombrePersona);
-        System.out.println("Gramos de proteínas ingeridos: "+ gramosProteinasIngeridos);
-        System.out.println("Gramoos de carbohidratos ingeridos: "+ gramosCarbohidratosIngeridos);
-        System.out.println("Gramos de grasas ingeridos: "+ gramosGrasasIngeridos);
-        System.out.println("Calorías ingeridas: " + caloriasIngeridas);
+           System.out.println("Gramos de proteínas ingeridos: "+ gramosProteinasIngeridos);
+           System.out.println("Gramoos de carbohidratos ingeridos: "+ gramosCarbohidratosIngeridos);
+           System.out.println("Gramos de grasas ingeridos: "+ gramosGrasasIngeridos);
+           System.out.println("Calorías ingeridas: " + caloriasIngeridas);
+        }
+    }
+    
+    /**
+     *  Devuelve las calorías ingeridas por la persona.
+     */
+    public float getCaloriasIngeridas()
+    {
+        return caloriasIngeridas;
+    }
+    
+    /**
+     *  Devuelve el nombre de la persona.
+     */
+    public String getNombrePersona()
+    {
+        return nombrePersona;
+    }
+    
+    /**
+     * Compara usuarios para ver cuál ha ingerido más calorías.
+     */
+    public void compararUsuarios(Usuario persona)
+    {
+        if (caloriasIngeridas > persona.getCaloriasIngeridas()) {
+            System.out.println(nombrePersona +" ha consumido más calorías que "+ persona.getNombrePersona());
+        }
+        else {
+            System.out.println(nombrePersona +" ha consumido menos calorías que "+ persona.getNombrePersona());
         }
     }
 }
