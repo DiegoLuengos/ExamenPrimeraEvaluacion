@@ -39,10 +39,24 @@ public class Usuario
      */
     public void muestraEstado()
     {
+        float gramosTotales = gramosProteinasIngeridos + gramosCarbohidratosIngeridos +
+        gramosGrasasIngeridos;
+        if (gramosTotales != 0) {
         System.out.println("Nombre : "+ nombrePersona);
+        System.out.println("Gramos de proteínas ingeridos: "+ gramosProteinasIngeridos + 
+        "("+(gramosProteinasIngeridos*100)/gramosTotales +"%)");
+        System.out.println("Gramoos de carbohidratos ingeridos: "+ gramosCarbohidratosIngeridos + 
+        "("+(gramosCarbohidratosIngeridos*100)/gramosTotales +"%)");
+        System.out.println("Gramos de grasas ingeridos: "+ gramosGrasasIngeridos + 
+        "("+(gramosGrasasIngeridos*100)/gramosTotales +"%)");
+        System.out.println("Calorías ingeridas: " + caloriasIngeridas);
+       }
+       else {
+           System.out.println("Nombre : "+ nombrePersona);
         System.out.println("Gramos de proteínas ingeridos: "+ gramosProteinasIngeridos);
         System.out.println("Gramoos de carbohidratos ingeridos: "+ gramosCarbohidratosIngeridos);
         System.out.println("Gramos de grasas ingeridos: "+ gramosGrasasIngeridos);
         System.out.println("Calorías ingeridas: " + caloriasIngeridas);
+        }
     }
 }
