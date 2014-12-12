@@ -97,4 +97,11 @@ public class Usuario
         System.out.println("Alimento más calórico ingerido por el usuario: " + comida.getCalorias());
     }
     
+    /**
+     *  Muestra los datos del alimento ingerido por el usuario.
+     */
+    public void datosAlimentoIngerido(Alimento comida)
+    {
+        comida.muestraDatos();
+    }
 }
